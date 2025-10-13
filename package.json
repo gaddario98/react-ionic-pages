@@ -1,0 +1,16 @@
+{
+  "name": "@gaddario98/react-ionic-pages",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "peerDependencies": {
+    "@gaddario98/react-ionic-ui": "*",
+    "@gaddario98/react-ionic-utiles": "*",
+    "@gaddario98/react-pages": "*",
+    "@gaddario98/react-queries": "*",
+    "@ionic/react": "*",
+    "postcss": "*",
+    "react": "*",
+    "react-hook-form": "*",
+    "tailwindcss": "*"
+  }
+}
