@@ -1,12 +1,12 @@
 {
   "name": "@gaddario98/react-ionic-pages",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "peerDependencies": {
-    "@gaddario98/react-ionic-ui": "*",
-    "@gaddario98/react-ionic-utiles": "*",
-    "@gaddario98/react-pages": "*",
-    "@gaddario98/react-queries": "*",
+    "@gaddario98/react-ionic-ui": "^1.0.2",
+    "@gaddario98/react-ionic-utiles": "^1.0.2",
+    "@gaddario98/react-pages": "^1.0.21",
+    "@gaddario98/react-queries": "^1.0.21",
     "@ionic/react": "*",
     "postcss": "*",
     "react": "*",
