@@ -1,7 +1,7 @@
 {
   "name": "@gaddario98/react-ionic-pages",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "peerDependencies": {
     "@gaddario98/react-ionic-ui": "*",
     "@gaddario98/react-ionic-utiles": "*",
@@ -12,5 +12,31 @@
     "react": "*",
     "react-hook-form": "*",
     "tailwindcss": "*"
+  },
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js",
+      "default": "./dist/components/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js",
+      "default": "./dist/hooks/index.js"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js"
   }
 }
