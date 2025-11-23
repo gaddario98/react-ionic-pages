@@ -10,7 +10,9 @@ export interface UseAuthPageProps {
   reportProblem?: React.ComponentProps<typeof Button>;
 }
 
-export const useIonicReactAuthPageProps = (props: UseAuthPageProps) => {
+export const useIonicReactAuthPageProps = (
+  props: UseAuthPageProps
+): PageProps => {
   const authPageProps = useMemo(
     (): PageProps => ({
       ns: "auth",

@@ -1,42 +1,80 @@
 {
   "name": "@gaddario98/react-ionic-pages",
-  "version": "1.0.2",
-  "main": "dist/index.js",
-  "peerDependencies": {
-    "@gaddario98/react-ionic-ui": "^1.0.2",
-    "@gaddario98/react-ionic-utiles": "^1.0.2",
-    "@gaddario98/react-pages": "^1.0.21",
-    "@gaddario98/react-queries": "^1.0.21",
-    "@ionic/react": "*",
-    "postcss": "*",
-    "react": "*",
-    "react-hook-form": "*",
-    "tailwindcss": "*"
+  "version": "1.0.21",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js",
+    "prepublishOnly": "yarn build"
   },
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "babel-plugin-react-compiler": "1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@gaddario98/react-ionic-ui": "^1.0.2",
+    "@gaddario98/react-pages": "^2.0.22"
+  },
+  "peerDependencies": {
+    "@ionic/react": "^8.5.6",
+    "postcss": "^8.5.3",
+    "react": ">=18.0.0 <20.0.0",
+    "react-hook-form": "^7.54.2",
+    "tailwindcss": "^4.1.4"
+  },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.mjs"
     },
     "./components": {
-      "types": "./dist/components/index.d.ts",
-      "import": "./dist/components/index.mjs",
-      "require": "./dist/components/index.js",
-      "default": "./dist/components/index.js"
+      "types": "./dist/types/components.d.ts",
+      "import": "./dist/esm/components.mjs",
+      "require": "./dist/cjs/components.js",
+      "default": "./dist/esm/components.mjs"
     },
     "./hooks": {
-      "types": "./dist/hooks/index.d.ts",
-      "import": "./dist/hooks/index.mjs",
-      "require": "./dist/hooks/index.js",
-      "default": "./dist/hooks/index.js"
+      "types": "./dist/types/hooks.d.ts",
+      "import": "./dist/esm/hooks.mjs",
+      "require": "./dist/cjs/hooks.js",
+      "default": "./dist/esm/hooks.mjs"
     }
   },
-  "type": "module",
-  "scripts": {
-    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js"
-  }
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaddario98/react-ionic-pages"
+  },
+  "keywords": [
+    "react-ionic",
+    "ionic",
+    "react",
+    "pages",
+    "gaddario98"
+  ],
+  "author": "Giosuè Addario",
+  "bugs": {
+    "url": "https://github.com/gaddario98/react-ionic-pages/issues"
+  },
+  "homepage": "https://github.com/gaddario98/react-ionic-pages#readme"
 }
